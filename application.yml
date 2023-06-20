@@ -1,0 +1,15 @@
+eureka.client.register-with-eureka=true
+eureka.client.fetch-registry=true
+eureka.client.service-url.defaultZone=http://localhost:8082/eureka/
+eureka.instance.hostname=localhost
+
+
+microservice:
+ payment-service:
+  endpoints:
+   endpoint:
+   uri:  http://localhost:8081/payment/savePayment  
+ order-service:
+  endpoints:
+   endpoint:
+   uri:  http://localhost:8080/order/bookOrder  
